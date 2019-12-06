@@ -1,0 +1,15 @@
+spring.application.name=sidecar-adaptor
+server.port=7667
+
+eureka.client.serviceUrl.defaultZone=http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7004/eureka/
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+
+sidecar.port=8000
+sidecar.health-uri=http://localhost:8000/health.json
+
+management.security.enabled=false
+
+
+#zuul.routes.wstore.path = / wstore / **
+#zuul.routes.wstore.url = http: // localhost: 8083

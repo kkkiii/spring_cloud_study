@@ -1,0 +1,28 @@
+server:
+  port: 7667
+spring:
+  application:
+    name: sidecar-adaptor
+
+sidecar:
+  port: 8000
+  health-uri: http://localhost:8000/health.json 
+  ip-address: 127.0.0.1
+  home-page-uri: http://127.0.0.1:8000/
+    
+#  
+#    
+#info:
+#  description: Spring Cloud Sidecar
+#  url: https://github.com/spring-cloud-samples  
+
+
+  
+eureka:
+  client:
+    serviceUrl:      
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7004/eureka/
+  instance:
+    instance-id: sidecar-adaptor
+    prefer-ip-address: true     #访问路径可以显示IP地址     
+

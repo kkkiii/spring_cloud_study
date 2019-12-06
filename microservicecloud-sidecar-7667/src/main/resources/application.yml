@@ -1,0 +1,23 @@
+
+server:
+  port: 7667
+
+spring:
+  application:
+    name: lumen-service
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: ${EUREKA_URI:http://localhost:7001/eureka},${EUREKA_URI:http://localhost:7002/eureka},${EUREKA_URI:http://localhost:7004/eureka}
+       defaultZone: http://localhost:7001/eureka
+    registerWithEureka: true
+    fetchRegistry: false
+  instance:
+    preferIpAddress: true
+    instance-id: lumen-service
+
+sidecar:
+  port: ${SIDECAR_PORT:8000}
+  health-uri: ${SIDECAR_HEALTH_URI:http://localhost:8000/health.json}
+  hostname: localhost
