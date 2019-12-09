@@ -14,6 +14,10 @@ eureka:
     instance-id: microservicecloud-zuul-gateway
     prefer-ip-address: true 
  
+management:
+  security:
+    enabled: false
+
  
 info:
   app.name: atguigu-microcloud
