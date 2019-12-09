@@ -99,5 +99,6 @@
   	<module>consumer-order</module>
   	<module>consumer-order-ribbon</module>
   	<module>provider-user2</module>
+  	<module>apigateway-zuul</module>
   </modules>
 </project>
